@@ -1,9 +1,5 @@
 # block_popular_ru_sites
-0. If rules exist
-sudo iptables -D OUTPUT -j BLOCK_RU_POPULAR
-sudo iptables -D FORWARD -j BLOCK_RU_POPULAR
-sudo iptables -F BLOCK_RU_POPULAR
-sudo iptables -X BLOCK_RU_POPULAR
+0. Delete all existing rules and make rm block_popular_ru_sites.sh
 
 1. wget https://raw.githubusercontent.com/qwert1986/block_popular_ru_sites/main/block_popular_ru_sites.sh
 
