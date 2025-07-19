@@ -147,7 +147,7 @@ ALL_RUSSIAN_DOMAINS=(
     # === СТРИМИНГОВЫЕ СЕРВИСЫ ===
     "kinopoisk.ru" "ivi.ru" "ivi.tv" "more.tv" "start.ru" "wink.ru"
     "okko.tv" "premier.one" "amediateka.ru" "tvzavr.ru" "zoomak.ru"
-    "youtube.com" "rutube.ru" "vk.com/video" "smotrim.ru" "1tv.ru"
+    "rutube.ru" "vk.com/video" "smotrim.ru" "1tv.ru"
     "ntv.ru" "ren.tv" "tnt-online.ru" "ctc.ru" "tv3.ru"
     
     # === МУЗЫКАЛЬНЫЕ СЕРВИСЫ ===
@@ -230,9 +230,7 @@ ALL_RUSSIAN_DOMAINS=(
     "career.ru" "freelance.ru" "fl.ru" "weblancer.net" "kwork.ru"
     
     # === CDN И ТЕХНИЧЕСКИЕ ДОМЕНЫ ===
-    "yastatic.net" "userapi.com" "imgsmail.ru" "mycdn.me"
-    "ok-cdn.com" "vkuservideo.net" "vkuseraudio.net" "vkuserlive.com"
-    "cdnjs.cloudflare.com" "maxcdn.bootstrapcdn.com" "ajax.googleapis.com"
+    "imgsmail.ru"
 )
 
 # ПОЛНЫЙ список IP-диапазонов российских AS (автономных систем)
