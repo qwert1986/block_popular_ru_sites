@@ -414,4 +414,18 @@ sudo iptables -A BLOCK_ALL_RUSSIAN -d 77.88.8.2 -j REJECT      # Yandex DNS Fami
 sudo iptables -A BLOCK_ALL_RUSSIAN -d 77.88.8.7 -j REJECT      # Yandex DNS Safe
 sudo iptables -A BLOCK_ALL_RUSSIAN -d 77.88.8.3 -j REJECT      # Yandex DNS Safe
 
-# Блокируем доступ к .ru и .рф доменам через аль
+echo "Подключаем цепочку BLOCK_ALL_RUSSIAN к iptables..."
+
+# Удалим старые подключения, если были
+sudo iptables -D OUTPUT -j BLOCK_ALL_RUSSIAN 2>/dev/null || true
+sudo iptables -D FORWARD -j BLOCK_ALL_RUSSIAN 2>/dev/null || true
+
+# Подключаем к основным цепочкам
+sudo iptables -A OUTPUT -j BLOCK_ALL_RUSSIAN
+sudo iptables -A FORWARD -j BLOCK_ALL_RUSSIAN
+
+echo ""
+echo "Блокировка завершена."
+echo "Заблокировано доменов: $total_domains"
+echo "Заблокировано IPv4 адресов: $total_ips"
+echo "Заблокировано IP-диапазонов: $total_ranges"
