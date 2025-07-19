@@ -20,8 +20,7 @@ ALL_RUSSIAN_DOMAINS=(
     "ok.ru" "odnoklassniki.ru" "mycdn.me" "ok-cdn.com"
     "agent.mail.ru" "icq.com" "icq.net" "icq.im"
     "tamtam.chat" "tamtam.me"
-    "discord.gg" "discord.com" # российские серверы
-    
+
     # === ЯНДЕКС ЭКОСИСТЕМА ===
     "yandex.ru" "yandex.com" "yandex.net" "ya.ru" "yastatic.net" "yandex.st"
     "market.yandex.ru" "beru.ru" "pokupki.market.yandex.ru"
@@ -136,7 +135,7 @@ ALL_RUSSIAN_DOMAINS=(
     "lamoda.ru" "kupivip.ru" "joom.ru" "goods.ru" "citilink.ru"
     "dns-shop.ru" "mvideo.ru" "eldorado.ru" "technopark.ru"
     "svyaznoy.ru" "euroset.ru" "re-store.ru" "apple-rus.ru"
-    "aliexpress.ru" "tmall.ru" "taobao.ru" "1688.com"
+    "aliexpress.ru" "tmall.ru" "taobao.ru"
     
     # === ДОСТАВКА ЕДЫ И ТАКСИ ===
     "eda.yandex.ru" "delivery-club.ru" "deliveryclub.ru" "foodband.ru"
@@ -151,8 +150,7 @@ ALL_RUSSIAN_DOMAINS=(
     "ntv.ru" "ren.tv" "tnt-online.ru" "ctc.ru" "tv3.ru"
     
     # === МУЗЫКАЛЬНЫЕ СЕРВИСЫ ===
-    "music.yandex.ru" "zvooq.ru" "boom.ru" "zaycev.net" "muzofon.com"
-    "spotify.com" "apple.com/apple-music" "deezer.com" "tidal.com"
+    "music.yandex.ru" "zvooq.ru" "boom.ru" "zaycev.net" 
     
     # === ИГРЫ ===
     # World of Tanks экосистема
@@ -160,7 +158,7 @@ ALL_RUSSIAN_DOMAINS=(
     "wot.ru" "wows.ru" "wowp.ru" "tanki.su" "wotblitz.ru"
     
     # Gaijin Entertainment
-    "gaijin.net" "warthunder.ru" "warthunder.com" "enlisted.net" "crossout.net"
+    "gaijin.net" "warthunder.ru" "enlisted.net" "crossout.net"
     
     # Mail.ru Games / MY.GAMES
     "my.games" "mail.ru" "warface.ru" "allods.ru" "skyforge.ru"
@@ -214,7 +212,7 @@ ALL_RUSSIAN_DOMAINS=(
     # === ФИНАНСЫ И КРИПТОВАЛЮТЫ ===
     "finam.ru" "bcs.ru" "tinkoff.ru" "alfa-capital.ru"
     "vtb-capital.ru" "sberbank-cib.ru" "gazprombank.ru"
-    "binance.com" "garantex.io" "currency.com" "exmo.com"
+    "garantex.io" "currency.com"
     "yobit.net" "livecoin.net" "matbea.com" "btc-trade.com.ua"
     
     # === НЕДВИЖИМОСТЬ ===
@@ -233,126 +231,6 @@ ALL_RUSSIAN_DOMAINS=(
     "imgsmail.ru"
 )
 
-# ПОЛНЫЙ список IP-диапазонов российских AS (автономных систем)
-RUSSIAN_IP_RANGES=(
-    # Основные провайдеры
-    "5.45.192.0/18"      # Yandex
-    "5.255.192.0/18"     # Yandex
-    "37.9.64.0/18"       # Yandex
-    "37.140.128.0/18"    # Yandex
-    "77.88.0.0/18"       # Yandex
-    "87.250.224.0/19"    # Yandex
-    "93.158.128.0/18"    # Yandex
-    "95.108.128.0/17"    # Yandex
-    "128.140.168.0/21"   # Yandex
-    "141.8.136.0/21"     # Yandex
-    "178.154.128.0/17"   # Yandex
-    "213.180.192.0/19"   # Yandex
-    
-    "94.100.176.0/20"    # Mail.ru
-    "95.163.32.0/19"     # Mail.ru
-    "217.69.128.0/20"    # Mail.ru
-    "5.61.16.0/21"       # Mail.ru
-    "178.22.88.0/21"     # Mail.ru
-    
-    "87.240.128.0/18"    # VK.com
-    "95.142.192.0/20"    # VK.com
-    "185.32.248.0/22"    # VK.com
-    "87.240.190.0/23"    # VK.com
-    
-    # Банки
-    "195.161.0.0/16"     # Сбербанк
-    "195.209.0.0/16"     # Сбербанк
-    "212.164.224.0/19"   # Сбербанк
-    "217.15.144.0/20"    # Сбербанк
-    "81.18.224.0/20"     # Сбербанк
-    "46.53.192.0/18"     # Сбербанк
-    
-    "91.203.96.0/19"     # Альфа-банк
-    "212.34.32.0/19"     # Альфа-банк
-    "217.106.240.0/20"   # Альфа-банк
-    "91.203.128.0/19"    # Альфа-банк
-    
-    "185.43.7.0/24"      # Тинькофф
-    "185.71.76.0/24"     # Тинькофф
-    "185.71.77.0/24"     # Тинькофф
-    "212.19.14.0/24"     # Тинькофф
-    "46.19.216.0/21"     # Тинькофф
-    
-    "212.164.0.0/16"     # ВТБ
-    "217.15.0.0/16"      # ВТБ
-    "195.161.32.0/19"    # ВТБ
-    
-    # Операторы связи
-    "212.188.0.0/16"     # МТС
-    "217.118.0.0/16"     # МТС
-    "195.34.32.0/19"     # МТС
-    "217.107.0.0/16"     # Beeline
-    "91.203.0.0/16"      # Beeline
-    "217.196.0.0/16"     # Megafon
-    "188.254.0.0/16"     # Megafon
-    "109.194.0.0/15"     # Tele2
-    "46.182.0.0/15"      # Tele2
-    
-    # Ростелеком
-    "109.254.0.0/16"     # Rostelecom
-    "188.170.0.0/16"     # Rostelecom
-    "94.25.0.0/16"       # Rostelecom
-    "46.39.0.0/16"       # Rostelecom
-    
-    # E-commerce
-    "185.60.216.0/22"    # Avito
-    "185.112.248.0/22"   # Avito
-    "94.142.140.0/22"    # Avito
-    "46.61.224.0/19"     # Avito
-    
-    "91.226.97.0/24"     # Wildberries
-    "178.154.231.0/24"   # Wildberries
-    "185.179.190.0/23"   # Wildberries
-    
-    "91.205.41.0/24"     # Ozon
-    "185.5.135.0/24"     # Ozon
-    "91.226.127.0/24"    # Ozon
-    
-    # Дополнительные российские диапазоны
-    "5.1.0.0/16"
-    "5.16.0.0/13"
-    "31.10.0.0/15"
-    "31.40.0.0/15"
-    "31.128.0.0/15"
-    "46.16.0.0/12"
-    "77.72.0.0/13"
-    "77.88.0.0/13"
-    "78.24.0.0/13"
-    "78.104.0.0/13"
-    "79.104.0.0/13"
-    "81.16.0.0/12"
-    "85.112.0.0/12"
-    "85.235.128.0/17"
-    "87.224.0.0/12"
-    "91.192.0.0/10"
-    "93.170.0.0/15"
-    "94.24.0.0/13"
-    "95.24.0.0/13"
-    "95.128.0.0/13"
-    "95.216.0.0/13"
-    "109.160.0.0/12"
-    "109.196.0.0/14"
-    "178.16.0.0/12"
-    "178.176.0.0/12"
-    "185.4.0.0/22"
-    "185.16.0.0/14"
-    "185.84.0.0/14"
-    "185.112.0.0/14"
-    "188.128.0.0/12"
-    "188.160.0.0/13"
-    "194.8.0.0/15"
-    "194.186.0.0/15"
-    "212.24.0.0/13"
-    "213.24.0.0/13"
-    "217.12.0.0/14"
-)
-
 # Создаем главную цепочку
 echo "Создаем цепочку BLOCK_ALL_RUSSIAN..."
 sudo iptables -N BLOCK_ALL_RUSSIAN 2>/dev/null || true
@@ -365,7 +243,6 @@ total_ranges=0
 echo "============================================"
 echo "НАЧИНАЕМ ПОЛНУЮ БЛОКИРОВКУ РОССИИ"
 echo "Доменов для обработки: ${#ALL_RUSSIAN_DOMAINS[@]}"
-echo "IP-диапазонов для блокировки: ${#RUSSIAN_IP_RANGES[@]}"
 echo "============================================"
 
 # Блокируем домены
@@ -399,14 +276,6 @@ for domain in "${ALL_RUSSIAN_DOMAINS[@]}"; do
     
     # Пауза для DNS
     sleep 0.05
-done
-
-echo ""
-echo "Этап 2/3: Блокируем российские IP-диапазоны..."
-for range in "${RUSSIAN_IP_RANGES[@]}"; do
-    echo "Блокируем диапазон: $range"
-    sudo iptables -A BLOCK_ALL_RUSSIAN -d $range -j REJECT --reject-with icmp-net-unreachable
-    ((total_ranges++))
 done
 
 echo ""
