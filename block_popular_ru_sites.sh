@@ -1,6 +1,15 @@
 #!/bin/bash
 
-# Полный скрипт для блокировки ВСЕХ популярных российских приложений и сервисов
+# === ПОДГОТОВКА: удаление старой цепочки и подключений ===
+echo "Удаляем старую цепочку BLOCK_ALL_RUSSIAN и подключения..."
+
+while sudo iptables -D OUTPUT -j BLOCK_ALL_RUSSIAN 2>/dev/null; do :; done
+while sudo iptables -D FORWARD -j BLOCK_ALL_RUSSIAN 2>/dev/null; do :; done
+
+sudo iptables -F BLOCK_ALL_RUSSIAN 2>/dev/null || true
+sudo iptables -X BLOCK_ALL_RUSSIAN 2>/dev/null || true
+sudo ip6tables -F BLOCK_ALL_RUSSIAN 2>/dev/null || true
+sudo ip6tables -X BLOCK_ALL_RUSSIAN 2>/dev/null || true
 
 echo "Настраиваем полную блокировку всех популярных российских приложений..."
 
@@ -420,12 +429,12 @@ echo "Подключаем цепочку BLOCK_ALL_RUSSIAN к iptables..."
 sudo iptables -D OUTPUT -j BLOCK_ALL_RUSSIAN 2>/dev/null || true
 sudo iptables -D FORWARD -j BLOCK_ALL_RUSSIAN 2>/dev/null || true
 
-# Подключаем к основным цепочкам
-sudo iptables -A OUTPUT -j BLOCK_ALL_RUSSIAN
-sudo iptables -A FORWARD -j BLOCK_ALL_RUSSIAN
-
 echo ""
 echo "Блокировка завершена."
 echo "Заблокировано доменов: $total_domains"
 echo "Заблокировано IPv4 адресов: $total_ips"
 echo "Заблокировано IP-диапазонов: $total_ranges"
+
+# Подключаем цепочку к OUTPUT и FORWARD
+sudo iptables -I OUTPUT 1 -j BLOCK_ALL_RUSSIAN
+sudo iptables -I FORWARD 1 -j BLOCK_ALL_RUSSIAN
